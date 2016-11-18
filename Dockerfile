@@ -4,6 +4,8 @@ RUN \
   find \
     /usr/src/mautic \
     /var/www/html \
+    /var/lock/apache2 \
+    /var/run/apache2 \
     -exec chgrp root {} + \
     -exec chmod g=rwX,g-s {} +
 
