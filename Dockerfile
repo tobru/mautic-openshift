@@ -7,7 +7,7 @@ RUN \
     -exec chgrp root {} + \
     -exec chmod g=rwX,g-s {} +
 
-COPY ports.conf /etc/apache2/ports.conf
+RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/apache2.conf
 
 USER www-data
 EXPOSE 8080
