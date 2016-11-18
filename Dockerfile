@@ -7,4 +7,7 @@ RUN \
     -exec chgrp root {} + \
     -exec chmod g=rwX,g-s {} +
 
+COPY ports.conf /etc/apache2/ports.conf
+
 USER www-data
+EXPOSE 8080
