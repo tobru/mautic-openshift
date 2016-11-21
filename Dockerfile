@@ -26,6 +26,7 @@ RUN curl -o mautic.zip -SL https://s3.amazonaws.com/mautic/releases/${MAUTIC_VER
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY makeconfig.php /makeconfig.php
 COPY makedb.php /makedb.php
+COPY php.ini /usr/local/etc/php/
 
 #VOLUME /var/www/html
 USER www-data
